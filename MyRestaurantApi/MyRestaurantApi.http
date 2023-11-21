@@ -1,0 +1,187 @@
+﻿@MyRestaurantApi_HostAddress = https://localhost:7293
+@contactRoute = /api/Contact
+@contentType = application/json
+
+GET https://localhost:123
+
+###
+###
+Get {{MyRestaurantApi_HostAddress}}{{contactRoute}}
+
+###
+Get {{MyRestaurantApi_HostAddress}}/api/Contact/3
+
+###
+PUT {{MyRestaurantApi_HostAddress}}/api/Contact/3
+Content-Type: {{contentType}}
+
+{
+  "id": 3,
+  "name": "Eline Barstad",
+  "email": "elineb@example.com",
+  "phone": "555-212-5658"
+}
+
+###
+
+POST https://localhost:7293/api/Contact
+Content-Type: application/json
+
+{
+  "name": "Eline Barstad",
+  "email": "elineb@example.com",
+  "phone": "555-212-5658"
+}
+
+###
+GET http://localhost:5192/api/MenuItem/
+
+###
+GET {{MyRestaurantApi_HostAddress}}/api/MenuItemOrdered
+###
+Get {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+
+###
+
+Get {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+
+###
+
+Post {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+Content-Type: application/json
+
+{
+  "itemsOrdered": [
+    {
+      "menuItemId":1
+    }
+  ],
+  "subtotal": 3.50,
+  "tax": 0.8,
+  "total": 4.30,
+  "paymentMethod": 1,
+  "customer": {
+    "id": 2
+  }
+}
+###
+Post {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+Content-Type:  application/json
+
+{
+  "itemsOrdered": [
+    {
+      "menuItemId":1,
+      "price": 1.11,
+      "category": 1
+    },
+    {
+      "menuItemId":2
+    },
+    {
+      "menuItemId":3
+    },
+    {
+      "menuItemId":3
+    },
+    {
+      "menuItemId":4
+    },
+    {
+      "menuItemId":4
+    }
+  ],
+  "subtotal": 15.99,
+  "tax": 1.1,
+  "total": 17.00,
+  "paymentMethod": 2,
+  "customer": {
+    "id": 2
+  }
+}
+
+###
+GET {{MyRestaurantApi_HostAddress}}/api/MenuItem/
+
+###
+
+Get {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+###
+@newmsg = {{Message}}
+PUT https://httpbin.org/anything
+Content-Type: application/json
+
+{
+    "content": "content here",
+    "message": {{newmsg}}
+}
+
+###
+
+@LocalMessage = {{userDbConnectionString}}/{{ApiKey}}/{{otherSecret}}
+@OtherMsg = {{Message}}/
+
+###
+PUT https://httpbin.org/anything
+Content-Type: application/json
+
+{
+    "content": "content here",
+    "message": {{LocalMessage}}
+}
+###
+
+# ------------------------------------------------------------------
+# reqres.in
+# ------------------------------------------------------------------
+@reqHost = https://reqres.in
+@reqUsername = george.bluth@reqres.in
+
+GET {{reqHost}}/api/users
+###
+
+POST https://reqres.in/api/register
+Content-Type: application/json
+
+{
+  "username": "{{reqUsername}}",
+  "email": "hello@example.com",
+  "password": "123456"
+}
+
+###
+POST {{reqHost}}/api/login
+Content-Type: application/json
+
+{
+  "username": "{{reqUsername}}",
+  "email": "{{reqUsername}}",
+  "password": "some password"
+}
+
+###
+GET https://reqres.in/api/{resource}?page=1&per_page=10
+
+###
+GET https://reqres.in/api/{resource}/5
+###
+
+
+GET {{MyRestaurantApi_HostAddress}}/api/Contact/
+
+###
+
+GET {{MyRestaurantApi_HostAddress}}/api/Contact/
+
+###
+
+POST {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+
+{
+
+}
+###
+
+POST {{MyRestaurantApi_HostAddress}}/api/MenuItem/
+
+###
