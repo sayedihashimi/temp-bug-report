@@ -1,4 +1,5 @@
 ﻿@MyRestaurantApi_HostAddress = https://localhost:7293
+<<<<<<< HEAD
 @contactRoute = /api/Contact
 @contentType = application/json
 
@@ -35,6 +36,14 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5192/api/MenuItem/
+=======
+
+Get {{MyRestaurantApi_HostAddress}}/api/Contact/
+
+###
+
+Get http://localhost:5192/api/MenuItem/
+>>>>>>> 272a22ea7225f83100a0d510a28220d1f79cffd7
 
 ###
 GET {{MyRestaurantApi_HostAddress}}/api/MenuItemOrdered
@@ -66,7 +75,11 @@ Content-Type: application/json
 }
 ###
 Post {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+<<<<<<< HEAD
 Content-Type:  application/json
+=======
+Content-Type: application/json
+>>>>>>> 272a22ea7225f83100a0d510a28220d1f79cffd7
 
 {
   "itemsOrdered": [
@@ -100,12 +113,16 @@ Content-Type:  application/json
   }
 }
 
+<<<<<<< HEAD
 ###
+=======
+>>>>>>> 272a22ea7225f83100a0d510a28220d1f79cffd7
 GET {{MyRestaurantApi_HostAddress}}/api/MenuItem/
 
 ###
 
 Get {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
+<<<<<<< HEAD
 ###
 @newmsg = {{Message}}
 PUT https://httpbin.org/anything
@@ -183,5 +200,7 @@ POST {{MyRestaurantApi_HostAddress}}/api/TogoOrder/
 ###
 
 POST {{MyRestaurantApi_HostAddress}}/api/MenuItem/
+=======
+>>>>>>> 272a22ea7225f83100a0d510a28220d1f79cffd7
 
 ###

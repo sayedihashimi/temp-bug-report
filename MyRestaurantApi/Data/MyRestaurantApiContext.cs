@@ -118,6 +118,9 @@ namespace MyRestaurantApi.Data
             }
         };
         public DbSet<MyRestaurantApi.TogoOrder> TogoOrder { get; set; } = default!;
+<<<<<<< HEAD
         public DbSet<MyRestaurantApi.AdminContact> AdminContact { get; set; } = default!;
+=======
+>>>>>>> 272a22ea7225f83100a0d510a28220d1f79cffd7
     }
 }
