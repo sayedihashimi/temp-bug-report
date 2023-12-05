@@ -29,10 +29,6 @@ app.MapMenuItemOrderedEndpoints();
 
 app.MapTogoOrderEndpoints();
 
-<<<<<<< HEAD
-app.MapAdminContactEndpoints();
 
-=======
->>>>>>> 272a22ea7225f83100a0d510a28220d1f79cffd7
 app.Run();
 
