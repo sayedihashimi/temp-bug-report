@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi } from 'vitest';
 
 describe('Sabrina\'s Playlist Quality Tests', () => {
     it('should be at least 8 hours long', () => {
